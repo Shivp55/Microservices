@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  config:
+    import:
+      - "application_qa.yml"
+      -  "application_prod.yml"
+
+  profiles:
+    active:
+    - "qa"
+
+build:
+  version: "3.0"
+
+accounts:
+  message: "Welcome to eazybank accounts related local APIs"
+  contactDetails:
+    name: "Shaishav Parekh"
+    email: "shivparekh803@gmail.com"
+
+  OnCallSupport:
+    - (555) 555-123
+    - (555) 523-1234
+
