@@ -115,16 +115,4 @@ Dublin, Ireland
 License
 
 This project is created for educational and portfolio purposes.
-
-
----
-
-### Important next step (strong portfolio impact)
-After pushing:
-1. Upload the architecture diagram into `docs/images/architecture.png`
-2. Commit and push
-3. Pin this repository on your GitHub profile
-
-This single repository, when pinned with a strong README + architecture diagram, significantly increases backend recruiter engagement because it clearly demonstrates **Spring Cloud distributed systems capability**, which many candidates lack.
-
 ---
