@@ -109,7 +109,7 @@ Production-grade security configuration
 Author
 
 Shaishav Parekh
-Backend • Cloud • Microservices Engineer
+Spring Boot • Backend • Cloud • Microservices Engineer
 Dublin, Ireland
 
 License
