@@ -43,6 +43,7 @@ Each module represents progressive development of real-world cloud-native backen
 
 ## Repository Structure
 
+```text
 Microservices/
 │
 ├── section_1/
@@ -55,7 +56,7 @@ Microservices/
 ├── section_10/
 ├── section_11/
 └── README.md
-
+```
 Each section introduces new microservices design concepts such as:
 
 - REST microservices communication
@@ -77,6 +78,7 @@ cd section_10/cards
 mvn spring-boot:run
 
 http://localhost:<service-port>
+```
 
 Ports vary based on service configuration.
 
