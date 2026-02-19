@@ -1,0 +1,71 @@
+[33mcommit e5b6f4aab5dddecc8b2e57cf38019a9428683562[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author:     Shivp55 <shivparekh803@gmail.com>
+AuthorDate: 2026-02-18 08:55:00 +0000
+Commit:     Shivp55 <shivparekh803@gmail.com>
+CommitDate: 2026-02-18 08:55:00 +0000
+
+    add section_11
+
+[33mcommit 10962fbb210ce2630cd593dcf988f56127edb56f[m
+Author:     Shivp55 <shivparekh803@gmail.com>
+AuthorDate: 2026-02-12 20:30:00 +0000
+Commit:     Shivp55 <shivparekh803@gmail.com>
+CommitDate: 2026-02-12 20:30:00 +0000
+
+    add section_10
+
+[33mcommit 03b34c67c96d0a904d19311798e01971e468279b[m
+Author:     Shivp55 <shivparekh803@gmail.com>
+AuthorDate: 2026-02-08 11:45:00 +0000
+Commit:     Shivp55 <shivparekh803@gmail.com>
+CommitDate: 2026-02-08 11:45:00 +0000
+
+    add section_9
+
+[33mcommit b8a0364ff3aac15cacfa1f2c7bde2e1f1cb71c55[m
+Author:     Shivp55 <shivparekh803@gmail.com>
+AuthorDate: 2026-02-02 13:10:00 +0000
+Commit:     Shivp55 <shivparekh803@gmail.com>
+CommitDate: 2026-02-02 13:10:00 +0000
+
+    add section_8
+
+[33mcommit 95eb73371443b67d49d3735529cb18919bfd632f[m
+Author:     Shivp55 <shivparekh803@gmail.com>
+AuthorDate: 2026-01-30 18:25:00 +0000
+Commit:     Shivp55 <shivparekh803@gmail.com>
+CommitDate: 2026-01-30 18:25:00 +0000
+
+    add section_7
+
+[33mcommit fdfcf4813ada13bc96a46b0a3bf4720e5a81c79a[m
+Author:     Shivp55 <shivparekh803@gmail.com>
+AuthorDate: 2026-01-26 21:05:00 +0000
+Commit:     Shivp55 <shivparekh803@gmail.com>
+CommitDate: 2026-01-26 21:05:00 +0000
+
+    add section_6 and spring cloud configs
+
+[33mcommit 8397f21cf97dbea6ec6da765e1994942cf802f58[m
+Author:     Shivp55 <shivparekh803@gmail.com>
+AuthorDate: 2026-01-22 19:40:00 +0000
+Commit:     Shivp55 <shivparekh803@gmail.com>
+CommitDate: 2026-01-22 19:40:00 +0000
+
+    add section_4
+
+[33mcommit 21b64e21164ad82eb99ce44e289c3b10d288e9f3[m
+Author:     Shivp55 <shivparekh803@gmail.com>
+AuthorDate: 2026-01-18 10:15:00 +0000
+Commit:     Shivp55 <shivparekh803@gmail.com>
+CommitDate: 2026-01-18 10:15:00 +0000
+
+    add section_1
+
+[33mcommit 090e2805c9dee88f820125fd884c33595b156662[m
+Author:     Shivp55 <shivparekh803@gmail.com>
+AuthorDate: 2026-02-18 08:59:06 +0000
+Commit:     Shivp55 <shivparekh803@gmail.com>
+CommitDate: 2026-02-18 08:59:06 +0000
+
+    chore: add gitignore
