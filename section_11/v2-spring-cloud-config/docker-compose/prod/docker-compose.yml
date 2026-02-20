@@ -132,6 +132,19 @@ services:
       file: common-config.yml
       service: network-deploy-service
 
+  tempo:
+    image: grafana/tempo:2.9.0
+    container_name: tempo
+    command: -config.file /etc/tempo-config.yml
+    ports:
+      - "3110:3100"
+      - "4318:4318"
+    volumes:
+      - ../observability/tempo/tempo.yml:/etc/tempo-config.yml
+    extends:
+      file: common-config.yml
+      service: network-deploy-service
+
 
   gateway:
     image: nginx:latest
@@ -209,13 +222,15 @@ services:
       - "8071:8071"
     healthcheck:
       test: "curl --fail --silent localhost:8071/actuator/health/readiness | grep UP || exit 1"
-      interval: 10s
+      interval: 20s
       timeout: 5s
-      retries: 10
+      retries: 20
       start_period: 10s
     extends:
       file: common-config.yml
       service: microservice-base-config
+    volumes:
+      - ../observability/otel/opentelemetry-javaagent-2.22.0.jar:/app/libs/opentelemetry-javaagent-2.22.0.jar:ro
     environment:
       OTEL_SERVICE_NAME: "configserver"
 
@@ -229,13 +244,15 @@ services:
         condition: service_healthy
     healthcheck:
       test: "curl --fail --silent localhost:8070/actuator/health/readiness | grep UP || exit 1"
-      interval: 10s
+      interval: 20s
       timeout: 5s
-      retries: 10
+      retries: 20
       start_period: 10s
     extends:
       file: common-config.yml
       service: microservice-configserver-config
+    volumes:
+      - ../observability/otel/opentelemetry-javaagent-2.22.0.jar:/app/libs/opentelemetry-javaagent-2.22.0.jar:ro
     environment:
       SPRING_APPLICATION_NAME: "eurekaserver"
       OTEL_SERVICE_NAME: "eurekaserver"
@@ -253,11 +270,14 @@ services:
         condition: service_healthy
     healthcheck:
       test: "curl --fail --silent localhost:8080/actuator/health/readiness | grep UP || exit 1"
-      interval: 10s
+      interval: 20s
       timeout: 5s
-      retries: 10
+      retries: 20
       start_period: 10s
+    volumes:
+      - ../observability/otel/opentelemetry-javaagent-2.22.0.jar:/app/libs/opentelemetry-javaagent-2.22.0.jar:ro
     environment:
+      BUILD_VERSION: "s11"
       SPRING_APPLICATION_NAME: "accounts"
       OTEL_SERVICE_NAME: "accounts"
 
@@ -277,11 +297,14 @@ services:
         condition: service_healthy
     healthcheck:
       test: "curl --fail --silent localhost:8090/actuator/health/readiness | grep UP || exit 1"
-      interval: 10s
+      interval: 20s
       timeout: 5s
-      retries: 10
+      retries: 20
       start_period: 10s
+    volumes:
+      - ../observability/otel/opentelemetry-javaagent-2.22.0.jar:/app/libs/opentelemetry-javaagent-2.22.0.jar:ro
     environment:
+      BUILD_VERSION: "s11"
       SPRING_APPLICATION_NAME: "loans"
       OTEL_SERVICE_NAME: "loans"
 
@@ -301,11 +324,14 @@ services:
         condition: service_healthy
     healthcheck:
       test: "curl --fail --silent localhost:9000/actuator/health/readiness | grep UP || exit 1"
-      interval: 10s
+      interval: 20s
       timeout: 5s
-      retries: 10
+      retries: 20
       start_period: 10s
+    volumes:
+      - ../observability/otel/opentelemetry-javaagent-2.22.0.jar:/app/libs/opentelemetry-javaagent-2.22.0.jar:ro
     environment:
+      BUILD_VERSION: "s11"
       SPRING_APPLICATION_NAME: "cards"
       OTEL_SERVICE_NAME: "cards"
 
@@ -325,7 +351,8 @@ services:
         condition: service_healthy
       cards:
         condition: service_healthy
-
+    volumes:
+      - ../observability/otel/opentelemetry-javaagent-2.22.0.jar:/app/libs/opentelemetry-javaagent-2.22.0.jar:ro
     environment:
       SPRING_APPLICATION_NAME: "gatewayserver"
       OTEL_SERVICE_NAME: "gatewayserver"
