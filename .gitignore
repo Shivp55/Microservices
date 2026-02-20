@@ -16,3 +16,5 @@
 **/target/
 **/jib-cache/
 **/.jib-cache/
+**/target/
+**/jib-cache/
