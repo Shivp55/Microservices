@@ -12,4 +12,7 @@
 .DS_Store
 .idea/
 *.iml
-.vscode/
+.vscode/# build output
+**/target/
+**/jib-cache/
+**/.jib-cache/
