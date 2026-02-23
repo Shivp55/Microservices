@@ -1,0 +1,26 @@
+server:
+  port: 9010
+
+spring:
+  application:
+    name: "message"
+
+  cloud:
+    function:
+      definition: email|sms
+
+    stream:
+      bindings:
+        email|sms-in-0:
+          destination: send-communication
+          group: ${spring.application.name}
+
+        email|sms-out-0:
+          destination: communication-sent
+
+      # Kafka binder configuration
+      # Host run  -> defaults to localhost:9092
+      # Docker run -> set KAFKA_BROKERS=kafka:29092
+      kafka:
+        binder:
+          brokers: ${KAFKA_BROKERS:localhost:9092}
